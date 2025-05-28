@@ -1,0 +1,18 @@
+[
+    {
+        "Id": 1,
+        "Name": "T-34",
+        "Description": "Советский танк",
+        "MaxVolume": 100.0,
+        "Volume": 80.0,
+        "UnitId": 1
+    },
+    {
+        "Id": 2,
+        "Name": "Panzer IV",
+        "Description": "Немецкий танк",
+        "MaxVolume": 120.0,
+        "Volume": 90.0,
+        "UnitId": 2
+    }
+]
