@@ -31,7 +31,7 @@ namespace Name
 
             // Поиск резервуара по имени
             Console.WriteLine("\nВведите название резервуара для поиска:");
-            string searchName = Console.ReadLine();
+            string? searchName = Console.ReadLine();
             var foundTank = FindTankByName(tanks, searchName);
             if (foundTank != null)
             {
@@ -44,6 +44,9 @@ namespace Name
             {
                 Console.WriteLine("Резервуар не найден.");
             }
+
+
+
         }
 
     }
