@@ -4,8 +4,8 @@ namespace Name
     public class Tank
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
         public int Volume { get; set; }
         public int MaxVolume { get; set; }
         public int UnitId { get; set; }
@@ -19,7 +19,7 @@ namespace Name
                 new Tank { Id = 3, Name = "Резервуар 3", Description = "Третий резервуар", Volume = 700, MaxVolume = 1500, UnitId = 1 }
             };
         }
-        public static Tank FindTankByName(Tank[] tanks, string name)
+        public static Tank? FindTankByName(Tank[] tanks, string? name)
         {
             Tank specific_tank = new Tank { };
             for (int i = 0; i < tanks.Length; i++)

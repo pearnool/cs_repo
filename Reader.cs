@@ -4,7 +4,7 @@ using System.Text.Json;
 using Name;
 public static class Reader
 {
-    public static Tank[] LoadTanksFromJson(string filePath)
+    public static Tank[]? LoadTanksFromJson(string filePath)
     {
         using (var reader = new StreamReader(filePath))
         {
