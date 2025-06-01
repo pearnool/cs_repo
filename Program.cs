@@ -4,12 +4,28 @@ using System.Linq;
 using static Name.Unit;
 using static Name.Factory;
 using static Name.Tank;
+using System.Reflection;
 
 namespace Name
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            //Reader.LoadTanksFromJson("tanks.json");            
+            //lab1();
+            lab2();
+
+        }
+        static void lab2()
+        {
+            System.Console.WriteLine("list of all deals: ");
+            Deal[]? deals = Reader.LoadDealsFromJson("JSON_sample_1.json");
+            System.Console.WriteLine("list of 5 first deals sorted by date with at least 100 sum:");
+            Deal[]? sorted_deals = Deal.GetNumberOfDeals(deals);
+            Deal.dealprinter(sorted_deals);
+        }
+        static void lab1()
         {
             // Создание экземпляров классов
             var tanks = GetTanks();
@@ -44,8 +60,6 @@ namespace Name
             {
                 Console.WriteLine("Резервуар не найден.");
             }
-
-
 
         }
 
