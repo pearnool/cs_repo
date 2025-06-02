@@ -24,6 +24,10 @@ namespace Name
             System.Console.WriteLine("list of 5 first deals sorted by date with at least 100 sum:");
             Deal[]? sorted_deals = Deal.GetNumberOfDeals(deals);
             Deal.dealprinter(sorted_deals);
+
+            System.Console.WriteLine("sum of deals sorted by month: ");
+            Deal[]? dealsbymonth = Deal.GetSumOfDealsByMonth(deals);
+            Deal.dealprinter(dealsbymonth);
         }
         static void lab1()
         {

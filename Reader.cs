@@ -20,10 +20,14 @@ namespace Name
             Tank[]? tanks = JsonSerializer.Deserialize<Tank[]>(jsonString);
 
             // Output the deserialized data
-            foreach (var tank in tanks)
+            if (tanks != null)
             {
-                Console.WriteLine($"Id: {tank.Id}, Name: {tank.Name}, Description: {tank.Description}, Volume:{tank.Volume}, MaxVolume: {tank.MaxVolume}, UnitId: {tank.UnitId} ");
+                for (int i = 0; i < tanks.Length; i++)
+                {
+                    Console.WriteLine($"Id: {tanks[i].Id}, Name: {tanks[i].Name}, Description: {tanks[i].Description}, Volume:{tanks[i].Volume}, MaxVolume: {tanks[i].MaxVolume}, UnitId: {tanks[i].UnitId} ");
+                }
             }
+
             return tanks;
         }
         public static Deal[]? LoadDealsFromJson(string filePath)
@@ -37,10 +41,18 @@ namespace Name
             Deal[]? deals = JsonSerializer.Deserialize<Deal[]>(jsonString);
 
             // Output the deserialized data
-            foreach (var deal in deals)
+            /*foreach (var deal in deals)
             {
                 Console.WriteLine($"Sum: {deal.Sum}, Id: {deal.Id}, Date: {deal.Date} ");
+            }*/
+            if (deals != null)
+            {
+                for (int i = 0; i < deals.Length; i++)
+                    {
+                        Console.WriteLine($"Sum: {deals[i].Sum}, Id: {deals[i].Id}, Date: {deals[i].Date} ");
+                    }
             }
+
             return deals;
         }
     }
