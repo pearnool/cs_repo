@@ -1,0 +1,18 @@
+[
+    {
+        "Id": 1,
+        "Name": "reservoiri 1",
+        "Description": "water atm.p. 1 holding tank",
+        "MaxVolume": 100,
+        "Volume": 80,
+        "UnitId": 1
+    },
+    {
+        "Id": 2,
+        "Name": "reservoir 2",
+        "Description": "liquid nitrogen atm.p. 4 holding tank",
+        "MaxVolume": 120,
+        "Volume": 90,
+        "UnitId": 2
+    }
+]
